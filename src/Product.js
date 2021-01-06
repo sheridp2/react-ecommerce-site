@@ -1,35 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Product.css";
 import Rating from "@material-ui/lab/Rating";
 import Box from "@material-ui/core/Box";
 
-function Product() {
-  const [value, setValue] = useState(2);
-
+function Product({ id, title, image, price, rating }) {
   return (
     <div className="product">
       <div className="product__info">
-        <p>The Lean Startup</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>$</small>
-          <strong>19.99</strong>
+          <strong>{price}</strong>
         </p>
       </div>
       <div className="product__rating">
         <Box component="fieldset" mb={3} borderColor="transparent">
-          <Rating
-            name="simple-controlled"
-            value={value}
-            onChange={(event, newValue) => {
-              setValue(newValue);
-            }}
-          />
+          <Rating name="read-only" value={rating} readOnly />
         </Box>
       </div>
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
-        alt=""
-      />
+      <img src={image} alt={title} />
       <button>Add to Basket</button>
     </div>
   );
