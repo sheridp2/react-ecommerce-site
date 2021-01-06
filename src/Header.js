@@ -8,7 +8,8 @@ function Header() {
     <div className="header">
       <img
         className="header__logo"
-        src="https://i.pinimg.com/originals/47/b7/bd/47b7bdac4285ee24654ca7d68cf06351.png"
+        alt="logo"
+        src="https://www.pentalic.com/wp-content/uploads/2018/12/Amazon-logo-white-small.png"
       />
 
       <div className="header__search">
