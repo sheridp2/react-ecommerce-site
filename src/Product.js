@@ -12,11 +12,11 @@ function Product({ id, title, image, price, rating }) {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-      </div>
-      <div className="product__rating">
-        <Box component="fieldset" mb={3} borderColor="transparent">
-          <Rating name="read-only" value={rating} readOnly />
-        </Box>
+        <div className="product__rating">
+          <Box mb={3} borderColor="transparent">
+            <Rating name="read-only" value={rating} readOnly />
+          </Box>
+        </div>
       </div>
       <img src={image} alt={title} />
       <button>Add to Basket</button>
